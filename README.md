@@ -1,6 +1,6 @@
 # MovieProject
 Project in Angular for Codehouse Academy to learn and solidify the bases of Angular and start
-data base with a nosql website, MongoDB
+ with a nosql data base, MongoDB
 
 # To Launch
 
