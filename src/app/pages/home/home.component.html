@@ -1,0 +1,50 @@
+<div class="jumbotron jumbo">
+  <h1 class="display-4 offset-2" style="color:rgb(255, 255, 255);font-weight:600;">Bienvenido a Películas Pelis</h1>
+  <p class="lead offset-3" style="color:rgb(255, 255, 255); font-size:18px;">
+   Date de alta como usuario y añade poco a poco tus películas favoritas.
+  </p>
+  <hr class="my-4" />
+  <p  style="color:rgb(255, 255, 255); font-size:22px;"class="offset-3">
+    Nuestras Películas Pelis estan divididas en tres géneros
+  </p>
+  <a class="btn mt-2 btn-lg offset-4 boton" href="#Fiction" role="button">Fiction</a>
+  <a class="btn mt-2 btn-lg ml-4 boton" href="#Historic" role="button">History</a>
+  <a class="btn mt-2 btn-lg ml-4 boton" href="#Drama" role="button">Drama</a>
+</div>
+
+<div class="container text-center ">
+  <h2 style="color: white">Drama</h2>
+  <div class="row justify">
+    <div *ngFor="let movie of movieService.movies">
+      <div *ngIf="movie.genre == 'Drama'">
+      <div class="col-4 mt-4 mb-4">
+    
+      <app-card [movie]="movie"></app-card> <!--Aqui mandamos el objeto 'movie' a el componente card-->
+    </div>
+  </div>
+</div>
+
+</div>
+<h2 id="Fiction" style="color: white">Fiction</h2>
+<div class="row justify">
+  <div  *ngFor="let movie of movieService.movies">
+    <div *ngIf="movie.genre == 'Fiction'">
+      <div class="col-4 mt-4 mb-4">
+      <app-card [movie]="movie"></app-card> <!--Aqui mandamos el objeto 'movie' a el componente card-->
+    </div>
+  </div>
+  </div>
+</div>
+<h2 id="Historic" style="color: white">History</h2>
+<div class="row justify">
+  <div  *ngFor="let movie of movieService.movies">
+    <div *ngIf="movie.genre == 'History'">
+      <div class="col-4 mt-4 mb-4">
+      <app-card [movie]="movie"></app-card> <!--Aqui mandamos el objeto 'movie' a el componente card-->
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+

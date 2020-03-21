@@ -1,0 +1,47 @@
+<div class="fondo">
+ 
+<div class="container-fluid mt-10 page">
+  <h1 style="color: white;" class="offset-2" >Añade tu Película.</h1>
+<form #movieForm="ngForm" (ngSubmit)="addMovie(movieForm)" >
+     <div class="form-group">
+      <label for="exampleFormControlInput1" style="color: white;">Título</label>
+      <input type="email" class="form-control" 
+      name="title" #title="ngModel" [(ngModel)]="movieService.selectedMovie.title">
+    </div>
+   
+  <!--I´m not sure how to set a default value-->
+
+  <div class="form-group ">
+    <label for="exampleFormControlSelect1" style="color: white;">Género</label>
+    <select class="form-control" 
+     name="genre" #genre="ngModel" [(ngModel)]="movieService.selectedMovie.genre">
+      <option>Drama</option>
+      <option>Fiction</option>
+      <option>History</option>
+    </select>
+  </div>
+
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" style="color: white;">Status</label>
+        <select class="form-control" 
+        name="status" #status="ngModel" [(ngModel)]="movieService.selectedMovie.status">
+          <option>Favourite</option>
+          <option>Watched</option>
+          <option>Pending</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1" style="color: white;">Poster Link</label>
+        <input type="email" class="form-control" 
+        name="poster" #poster="ngModel" [(ngModel)]="movieService.selectedMovie.poster">
+      </div>
+     
+      <button class="btn btn-primary mr-5 offset-2 boton" type="submit">Agregar Pelicula</button>
+      <button class="btn btn-primary boton" type="submit" (click)="resetForm(movieForm)">Clean</button>
+
+  </form>
+</div>
+</div>
+  

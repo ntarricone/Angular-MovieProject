@@ -1,0 +1,10 @@
+<div class="card backcolor" style="width: 18rem;">
+  <img [src]="movie?.poster" class="card-img-top imgSize" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ movie.title }}</h5>
+    <p class="card-text">Status: {{ movie.status }}</p>
+    <p class="card-text">Genero: {{ movie.genre }}</p>
+
+    <a class="btn mt-2 btn-lg boton" href="#Fiction" role="button" (click)="deleteMovie(movie._id)">Borrar</a>
+  </div>
+</div>
